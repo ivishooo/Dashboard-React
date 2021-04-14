@@ -14,7 +14,7 @@ class amountOfProducts extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/products", this.amountProducts);
+      this.apiCall("https://ecommerce-yeah.herokuapp.com/api/products", this.amountProducts);
   }
 
 

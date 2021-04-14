@@ -14,16 +14,16 @@ class lastProduct extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/products/42", this.lastProducts);
+      this.apiCall("https://ecommerce-yeah.herokuapp.com/api/products/last", this.lastProducts);
   }
 
 
   lastProducts = (data) => {
       this.setState({
           imgpath: data.data.imgpath,
-          name: data.data.name,
-          description: data.data.description,
-          price: data.data.price
+          name: data.data[0].name,
+          description: data.data[0].description,
+          price: data.data[0].price
       })
   }
 

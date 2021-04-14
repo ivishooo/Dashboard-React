@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import Sidebar from './components/sidebar/Sidebar'
 import Topbar from './components/topbar/Topbar'
-import PageHeading from './components/pageHeading/PageHeading'
+import PageHeading from './components/pageHeading/pageHeading'
 import AmountOfUsers from './components/amount/AmountOfUsers'
 import AmountOfProducts from './components/amount/AmountOfProducts'
 import AmountOfCategories from './components/amount/AmountOfCategories'
@@ -11,6 +11,27 @@ import LastUser from './components/last/lastUser'
 import Categories from './components/categories/Categories'
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);   
+    this.state = []
+}
+
+apiCall(url, consecuencia) {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => consecuencia(data))
+        .catch(e => console.log(e))
+}
+
+componentDidMount() {
+    this.apiCall("http://localhost:3000/api/products", this.listProducts);
+}
+
+
+listProducts = (data) => {
+    this.setState(data.data)
+}
 
   render = () => {
     return (
@@ -32,6 +53,8 @@ class App extends React.Component {
               </div>
             </div>
           </div>
+          <div>
+        </div>
         </div>
       </div>
     </div>

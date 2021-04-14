@@ -14,7 +14,7 @@ class amountOfUsers extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/users", this.amountUsers);
+      this.apiCall("https://ecommerce-yeah.herokuapp.com/api/users", this.amountUsers);
   }
 
 

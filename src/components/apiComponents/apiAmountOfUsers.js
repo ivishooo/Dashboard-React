@@ -14,11 +14,11 @@ class categories extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/category", this.lastUser);
+      this.apiCall("http://localhost:3000/api/category", this.categoryName);
   }
 
 
-  lastUser = (data) => {
+  categoryName = (data) => {
       this.setState({
           titulo : data.data.title,
       })
@@ -26,18 +26,59 @@ class categories extends Component {
 
   render() {
       return (
-        <div className="col-lg-6 mb-4">
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Last User in Data Dase</h6>
-								</div>
-								<div className="card-body">
-									<p>Id: {this.state.id}</p>
-									<p>Email: {this.state.email}</p>
-									<p>Username: {this.state.username}</p>
-								</div>
-							</div>
-						</div>
+        <div className="col-lg-6 mb-4">						
+        <div className="card shadow mb-4">
+            <div className="card-header py-3">
+                <h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
+            </div>
+            <div className="card-body">
+                <div className="row">
+                    <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                Category 01
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                Category 02
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                Category 03
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                Category 04
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                Category 05
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                Category 06
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
       );
   }
 }

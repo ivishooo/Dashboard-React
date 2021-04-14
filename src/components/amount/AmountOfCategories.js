@@ -14,7 +14,7 @@ class amountOfCategories extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/category", this.amountCategories);
+      this.apiCall("https://ecommerce-yeah.herokuapp.com/api/category", this.amountCategories);
   }
 
 

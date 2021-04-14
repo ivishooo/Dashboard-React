@@ -14,16 +14,15 @@ class lastUser extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/users", this.lastUser);
+      this.apiCall("https://ecommerce-yeah.herokuapp.com/api/users/last", this.lastUser);
   }
 
 
   lastUser = (data) => {
       this.setState({
-          imgpath: data.data.imgpath,
-          id: data.data.id,
-          email: data.data.email,
-          username : data.data.username
+          id: data.data[0].id,
+          email: data.data[0].email,
+          username : data.data[0].username
       })
   }
 
@@ -32,10 +31,10 @@ class lastUser extends Component {
         <div className="col-lg-6 mb-4">
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Last User in Data Dase</h6>
+									<h6 className="m-0 font-weight-bold text-primary">Last User in Data Base</h6>
 								</div>
 								<div className="card-body">
-									<p>Id: {this.state.id}</p>
+									<p>Usuario Numero: {this.state.id}</p>
 									<p>Email: {this.state.email}</p>
 									<p>Username: {this.state.username}</p>
 								</div>
