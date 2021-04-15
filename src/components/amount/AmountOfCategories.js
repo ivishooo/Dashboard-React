@@ -31,7 +31,7 @@ class amountOfCategories extends Component {
           <div className="card-body">
             <div className="row no-gutters align-items-center">
               <div className="col mr-2">
-                <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Categories quantity
+                <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Categories in Database
                 </div>
                 <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.categories}</div>
               </div>

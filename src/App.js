@@ -9,6 +9,8 @@ import AmountOfCategories from './components/amount/AmountOfCategories'
 import LastProduct from './components/last/LastProduct'
 import LastUser from './components/last/lastUser'
 import Categories from './components/categories/Categories'
+import ProductList from './components/table/ProductList'
+import GifIronman from './components/gif/GifIronman'
 
 class App extends React.Component {
 
@@ -25,7 +27,7 @@ apiCall(url, consecuencia) {
 }
 
 componentDidMount() {
-    this.apiCall("http://localhost:3000/api/products", this.listProducts);
+    this.apiCall("https://ecommerce-yeah.herokuapp.com/api/products", this.listProducts);
 }
 
 
@@ -50,12 +52,14 @@ listProducts = (data) => {
                 <LastProduct/>
                 <LastUser/>
                 <Categories/>
+                <GifIronman/>
               </div>
             </div>
           </div>
           <div>
         </div>
         </div>
+        <ProductList/>
       </div>
     </div>
     )

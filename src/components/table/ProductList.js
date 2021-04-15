@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Products from './Products'
 
 class ProductList extends Component {
   constructor(props) {
       super(props);   
-      this.state = {}
+      this.state = {products:[]}
   }
 
   apiCall(url, consecuencia) {
@@ -14,13 +15,14 @@ class ProductList extends Component {
   }
 
   componentDidMount() {
-      this.apiCall("http://localhost:3000/api/products", this.tableList);
+      this.apiCall("https://ecommerce-yeah.herokuapp.com/api/products", this.tableList);
   }
 
 
   tableList = (data) => {
       this.setState({
           products : data.data,
+          
       })
   }
 
@@ -29,14 +31,16 @@ class ProductList extends Component {
     <table class="table">
         <thead>
             <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
             </tr>
         </thead>
         <tbody>
-           
+        {this.state.products.map(function (product, i){
+						return <Products id={product.id}name={product.name} description={product.description} price={product.price}/>
+					})}
         </tbody>
     </table>
       );
