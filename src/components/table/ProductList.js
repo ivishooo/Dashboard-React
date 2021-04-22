@@ -32,9 +32,9 @@ class ProductList extends Component {
         <thead>
             <tr>
             <th scope="col">id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Description</th>
-            <th scope="col">Price</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Precio</th>
             </tr>
         </thead>
         <tbody>

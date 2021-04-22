@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import Sidebar from './components/sidebar/Sidebar'
 import Topbar from './components/topbar/Topbar'
-import PageHeading from './components/pageHeading/pageHeading'
+import PageHeading from './components/pageHeading/PageHeading'
 import AmountOfUsers from './components/amount/AmountOfUsers'
 import AmountOfProducts from './components/amount/AmountOfProducts'
 import AmountOfCategories from './components/amount/AmountOfCategories'
@@ -10,7 +10,6 @@ import LastProduct from './components/last/LastProduct'
 import LastUser from './components/last/lastUser'
 import Categories from './components/categories/Categories'
 import ProductList from './components/table/ProductList'
-import GifIronman from './components/gif/GifIronman'
 
 class App extends React.Component {
 
@@ -52,7 +51,6 @@ listProducts = (data) => {
                 <LastProduct/>
                 <LastUser/>
                 <Categories/>
-                <GifIronman/>
               </div>
             </div>
           </div>

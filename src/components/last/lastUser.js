@@ -32,13 +32,14 @@ class lastUser extends Component {
         <div className="col-lg-6 mb-4">
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Ultimo usuario en la base de datos</h6>
+									<h6 className="m-0 font-weight-bold text-primary">Último usuario en la base de datos</h6>
 								</div>
 								<div className="card-body">
-                                    <img style={{width: "400px", height: "200px", left: "0px", top: "0px", opacity: 1}} src={`https://ecommerce-yeah.herokuapp.com/uploads/avatars/${this.state.avatar}`} alt= " " ></img>
-									<p>Usuario Numero: {this.state.id}</p>
-									<p>Email: {this.state.email}</p>
-									<p>Username: {this.state.username}</p>
+                                    <img style={{width: "130px", height: "130px", borderRadius: "50%", left: "0px", top: "0px", opacity: 1}} src={`https://ecommerce-yeah.herokuapp.com/uploads/avatars/${this.state.avatar}`} alt= " " ></img>
+									<p></p>
+                                    <p>Usuario número: {this.state.id}</p>
+									<p>Correo electrónico: {this.state.email}</p>
+									<p>Nombre de usuario: {this.state.username}</p>
 								</div>
 							</div>
 						</div>

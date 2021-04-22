@@ -32,14 +32,14 @@ class lastProduct extends Component {
         <div className="col-lg-6 mb-4">
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Ultimo producto en la base de datos</h6>
+									<h6 className="m-0 font-weight-bold text-primary">Último producto en la base de datos</h6>
 								</div>
 								<div className="card-body">
-                                    <img style={{width: "400px", height: "200px", left: "0px", top: "0px", opacity: 1}} src={`https://ecommerce-yeah.herokuapp.com/uploads/products/${this.state.imgpath}`} alt= " " ></img>
-									<p>Nombre del Producto: {this.state.name}</p>
-									<p>Descripcion del Producto: {this.state.description}</p>
-									<p>Precio del Producto: ${this.state.price}</p>
-									<a target="_blank" rel="nofollow" href="/">View product detail</a>
+                                    <img style={{width: "400px", height: "250px", borderRadius: "10px", left: "0px", top: "0px", opacity: 1}} src={`https://ecommerce-yeah.herokuapp.com/uploads/products/${this.state.imgpath}`} alt= " " ></img>
+									<p></p>
+                                    <p>Nombre: {this.state.name}</p>
+									<p>Descripción: {this.state.description}</p>
+									<p>Precio: ${new Intl.NumberFormat().format(this.state.price)}</p>
 								</div>
 							</div>
 						</div>

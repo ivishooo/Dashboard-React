@@ -4,7 +4,8 @@ function Products (props) {
         <th scope="row">{props.id}</th>
         <td>{props.name}</td>
         <td>{props.description}</td>
-        <td>${props.price}</td>
+        <td>${new Intl.NumberFormat().format(props.price)}</td>
+        
         </tr>
     );
 }
