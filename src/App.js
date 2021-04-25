@@ -6,6 +6,7 @@ import PageHeading from './components/pageHeading/PageHeading'
 import AmountOfUsers from './components/amount/AmountOfUsers'
 import AmountOfProducts from './components/amount/AmountOfProducts'
 import AmountOfCategories from './components/amount/AmountOfCategories'
+import GitIronman from './components/gif/GifIronman'
 import LastProduct from './components/last/LastProduct'
 import LastUser from './components/last/lastUser'
 import Categories from './components/categories/Categories'
@@ -51,6 +52,7 @@ listProducts = (data) => {
                 <LastProduct/>
                 <LastUser/>
                 <Categories/>
+                <GitIronman/>
               </div>
             </div>
           </div>
